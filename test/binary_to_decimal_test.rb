@@ -33,3 +33,33 @@ describe "binary to decimal" do
     binary_to_decimal(binary_array).must_equal expected_decimal
   end
 end
+
+describe "decimal to binary" do 
+  it "from 9 to 1001" do 
+    decimal_input = 9
+    expected_binary = 1001
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end 
+
+  it "from 100 to 1100100" do 
+    decimal_input = 100
+    expected_binary = 1100100
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end 
+
+  it "from 0 decimal to binary 0 " do 
+    decimal_input = 0
+    expected_binary = 0
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end 
+  
+  it "from random decimal to binary" do 
+    decimal_input = rand(0..1000)
+    expected_binary = decimal_input.to_s(2)
+
+    decimal_to_binary(decimal_input).to_s.must_equal expected_binary
+  end 
+end 
