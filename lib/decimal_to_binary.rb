@@ -1,10 +1,10 @@
 def decimal_to_binary(decimal)
-  if decimal == 0
-    return 0
-  end
-
   if decimal == nil
     raise ArgumentError.new, "Invalid argument"
+  end
+
+  if decimal == 0
+    return 0
   end
 
   binary_array = []
