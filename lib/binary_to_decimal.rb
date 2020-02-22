@@ -34,3 +34,5 @@ def binary_to_decimal(binary_array)
 
   return decimal
 end
+
+
