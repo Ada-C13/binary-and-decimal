@@ -7,11 +7,9 @@
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   decimal_value = []
+
   binary_array.each_with_index do |num, index|
-    exponent = ((binary_array.length - 1) - index)
-    if num == 1
-      decimal_value << 2 ** exponent
-    end
+    decimal_value << num * (2 ** ((binary_array.length - 1) - index))
   end
   return decimal_value.sum
 end
