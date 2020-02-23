@@ -39,6 +39,4 @@ def decimal_to_binary(decimal)
   return binary_array
 end
 
-p decimal_to_binary(153)
-
 
