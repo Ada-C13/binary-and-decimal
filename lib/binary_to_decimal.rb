@@ -15,5 +15,3 @@ def binary_to_decimal(binary_array)
   end
   return decimal
 end
-
-puts binary_to_decimal([1,1,1,0,0,1])
