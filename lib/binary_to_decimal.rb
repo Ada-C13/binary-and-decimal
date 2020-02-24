@@ -4,20 +4,21 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
-# def binary_to_decimal(binary_array)
-#   sum = 0
-#   index = 0
-#   while index < binary_array.length
-#     if binary_array[index] == 1
-#       decimal = 2**(binary_array.length - (index+1)) 
-#     else 
-#       decimal = 0
-#     end
-#       sum += decimal
-#       index +=1 
-#   end
-#   return sum
-# end
+
+def binary_to_decimal(binary_array)
+  sum = 0
+  index = 0
+  while index < binary_array.length
+    if binary_array[index] == 1
+      decimal = 2**(binary_array.length - (index+1)) 
+    else 
+      decimal = 0
+    end
+      sum += decimal
+      index +=1 
+  end
+  return sum
+end
   
 
 # array = [1, 0, 0, 1, 1, 0, 0, 1]
@@ -53,6 +54,13 @@
 #   end
 #   return sum    
 #   end
+
+######Optional 
+# Add a decimal_to_binary method 
+# which converts a decimal number received 
+# as a parameter into an array of binary digits. 
+# Then write 3 tests for the method.
+
 
  
 
