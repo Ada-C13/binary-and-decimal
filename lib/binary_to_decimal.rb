@@ -6,4 +6,13 @@
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   raise NotImplementedError
+  decimal_number = 0
+  i = binary_array.length-1
+
+  binary_array.each do |binary_number|
+    decimal_number += binary_number * 2**i
+    i -=1
+  end
+
+  return decimal_number
 end
