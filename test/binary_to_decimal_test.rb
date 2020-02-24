@@ -33,3 +33,34 @@ describe "binary to decimal" do
     binary_to_decimal(binary_array).must_equal expected_decimal
   end
 end
+
+
+# Optional: Testing for decimal_to_binary method
+describe "decimal to binary" do
+  it "From 13 to 1101" do
+    decimal_input = 13
+    expected_binary = [1, 1, 0, 1]
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end
+
+  it "From 153 to 10011001" do
+    decimal_input = 153
+    expected_binary = [1, 0, 0, 1, 1, 0, 0, 1]
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end
+  
+  it "From 0 to 0" do
+    decimal_input = 0
+    expected_binary = [0]
+
+    decimal_to_binary(decimal_input).must_equal expected_binary
+  end
+
+  it "Raises ArgumentError if a negative value is passed in" do
+    decimal_input = (-128)
+
+    expect{decimal_to_binary(decimal_input)}.must_raise ArgumentError
+  end
+end
