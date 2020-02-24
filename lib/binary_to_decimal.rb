@@ -3,13 +3,12 @@
 # The most significant bit is at index 0.
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using the algorithm you devised in class.
-
 def binary_to_decimal(binary_array)
   decimal_value = 0
 
-  binary_array.each_with_index do |digit, index|
+  binary_array.length.times do |index|
     power = binary_array.length - 1 - index
-    decimal_value += (digit * (2 ** power))
+    decimal_value += (binary_array[index] * (2 ** power))
   end
 
   return decimal_value
@@ -26,6 +25,19 @@ def decimal_to_binary(decimal)
     decimal /= 2
     binary << remainder
   end
-
-  return binary.reverse
+  
+  return binary.reverse!  #or would need to implement the swap method to reverse in place
 end
+
+
+# alternative solution using Ruby method
+# def binary_to_decimal(binary_array)
+#   decimal_value = 0
+
+#   binary_array.each_with_index do |digit, index|
+#     power = binary_array.length - 1 - index
+#     decimal_value += (digit * (2 ** power))
+#   end
+
+#   return decimal_value
+# end
