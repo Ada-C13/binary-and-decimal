@@ -5,15 +5,20 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 
-
 def binary_to_decimal(binary_array)
+  n = binary_array.length - 1
   decimal = 0
   index = 0
-  while index < binary_array.length
-    decimal += binary_array[index] * 2 ** (binary_array.length - 1 - index)
+ 
+  while n >= 0
+    decimal += binary_array[index] * 2**n
+    n -= 1 
     index += 1
-  end
+  end 
   return decimal
+
 end
-dec  = binary_to_decimal([1, 1, 1, 1, 1, 1, 1, 0])
-print dec
+
+
+
+p binary_to_decimal([0,0,0,0,0,0,1,0])
